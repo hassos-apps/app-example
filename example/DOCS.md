@@ -1,6 +1,6 @@
-# __APP_NAME__
+# Example
 
-__APP_DESCRIPTION__
+Example app for the HassOS Apps ecosystem
 
 ## Installation
 
@@ -13,7 +13,13 @@ __APP_DESCRIPTION__
 2. Click on "Install".
 
 [my-ha-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
-[my-ha-url]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=__HA_ADDON_ID__&repository_url=https%3A%2F%2Fgithub.com%2Fhassos-apps%2Frepository
+[my-ha-url]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=local_example&repository_url=https%3A%2F%2Fgithub.com%2Fhassos-apps%2Frepository
+
+## About
+
+This is a reference implementation that demonstrates the HassOS Apps ecosystem
+conventions. It logs a random inspirational quote at a configurable interval —
+useful as a template and for verifying that your app infrastructure works.
 
 ## Configuration
 
@@ -27,6 +33,16 @@ dealing with an unknown issue.
 
 Possible values: `trace`, `debug`, `info`, `notice`, `warning`, `error`, `fatal`
 
+**Default**: `info`
+
+### Option: `seconds_between_quotes`
+
+How often (in seconds) to log a new random quote.
+
+Possible values: `10` to `3600`
+
+**Default**: `300` (5 minutes)
+
 ## Changelog & Releases
 
 This repository keeps a change log using [GitHub's releases][releases]
@@ -35,7 +51,7 @@ functionality.
 Releases are based on [Semantic Versioning][semver], and use the format
 of `MAJOR.MINOR.PATCH`.
 
-[releases]: https://github.com/hassos-apps/app-__APP_SLUG__/releases
+[releases]: https://github.com/hassos-apps/app-example/releases
 [semver]: http://semver.org/spec/v2.0.0.html
 
 ## Support

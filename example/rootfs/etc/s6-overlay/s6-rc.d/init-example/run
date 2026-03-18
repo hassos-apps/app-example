@@ -1,11 +1,11 @@
 #!/command/with-contenv bashio
 # shellcheck shell=bash
 # ==============================================================================
-# Home Assistant App: __APP_NAME__
-# Configures __APP_NAME__ before running
+# Home Assistant App: Example
+# Configures Example before running
 # ==============================================================================
 
-bashio::log.info "Initializing __APP_NAME__..."
+bashio::log.info "Initializing Example..."
 
 # Ensure data directory exists
 mkdir -p /data

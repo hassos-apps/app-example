@@ -1,6 +1,6 @@
 #include <tunables/global>
 
-profile __APP_SLUG__ flags=(attach_disconnected,mediate_deleted) {
+profile example flags=(attach_disconnected,mediate_deleted) {
   #include <abstractions/base>
 
   # Capabilities
@@ -49,7 +49,7 @@ profile __APP_SLUG__ flags=(attach_disconnected,mediate_deleted) {
   signal (receive) set=(kill,term) peer=/usr/bin/docker,
 
   # App-specific rules (customize per app):
-  # /opt/__APP_SLUG__/** rix,
+  # /opt/example/** rix,
   # /config/** rw,
   # /tmp/** rwk,
 }

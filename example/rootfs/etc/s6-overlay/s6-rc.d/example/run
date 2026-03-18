@@ -1,0 +1,32 @@
+#!/command/with-contenv bashio
+# shellcheck shell=bash
+# ==============================================================================
+# Home Assistant App: Example
+# Logs a random quote at a configurable interval
+# ==============================================================================
+
+declare interval
+
+bashio::log.info "Starting Example..."
+
+# Read configuration
+interval=$(bashio::config 'seconds_between_quotes')
+
+# Sample quotes
+quotes=(
+  "Home is where the smart is."
+  "Automate the boring stuff."
+  "A home that thinks for you."
+  "Let the machines handle it."
+  "One dashboard to rule them all."
+  "The best automation is the one you forget about."
+  "Smart home, simple life."
+  "If it can be automated, it should be."
+)
+
+# Main loop — log a random quote at the configured interval
+while true; do
+  index=$((RANDOM % ${#quotes[@]}))
+  bashio::log.info "${quotes[$index]}"
+  sleep "${interval}"
+done
